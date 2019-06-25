@@ -220,6 +220,15 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\ComboBoxEx.ico" />
+    <Image Include="res\facebook.ico" />
+    <Image Include="res\instagram.ico" />
+    <Image Include="res\line.ico" />
+    <Image Include="res\linkedin.ico" />
+    <Image Include="res\pinterest.ico" />
+    <Image Include="res\skype.ico" />
+    <Image Include="res\twitter.ico" />
+    <Image Include="res\viber.ico" />
+    <Image Include="res\youtube.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

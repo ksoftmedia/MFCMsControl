@@ -59,5 +59,32 @@
     <Image Include="res\ComboBoxEx.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\facebook.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\instagram.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\line.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\linkedin.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pinterest.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\skype.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\twitter.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\viber.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\youtube.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

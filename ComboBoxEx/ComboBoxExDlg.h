@@ -22,6 +22,9 @@ public:
 
 
 // Implementation
+
+private:
+	void InitComboBoxEx();
 protected:
 	HICON m_hIcon;
 
@@ -30,4 +33,8 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CComboBoxEx comboBoxEx;
+	CImageList imageList;
+	afx_msg void OnCbnSelchangeComboboxex();
 };
