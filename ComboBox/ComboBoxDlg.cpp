@@ -26,6 +26,26 @@ CComboBoxDlg::CComboBoxDlg(CWnd* pParent /*=nullptr*/)
 void CComboBoxDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBOBOX, combobox);
+}
+
+void CComboBoxDlg::InitComboBox()
+{
+	TCHAR* itemText[] = { _T("facebook"),
+						 _T("instagram"),
+						 _T("line"),
+						 _T("linkedin"),
+						 _T("pinterest"),
+						 _T("skype"),
+						 _T("twitter"),
+						 _T("viber"),
+						 _T("youtube") };
+	int length = sizeof(itemText) / sizeof(*itemText);
+	for (int i = 0; i < length; i++)
+	{
+		combobox.AddString(itemText[i]);
+	}
+	combobox.SetCurSel(0);
 }
 
 BEGIN_MESSAGE_MAP(CComboBoxDlg, CDialogEx)
@@ -45,7 +65,7 @@ BOOL CComboBoxDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
-	// TODO: Add extra initialization here
+	InitComboBox();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
