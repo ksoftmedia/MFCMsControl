@@ -26,6 +26,13 @@ CAnimationDlg::CAnimationDlg(CWnd* pParent /*=nullptr*/)
 void CAnimationDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_ANIMATE, animation);
+}
+
+void CAnimationDlg::InitAnimation()
+{
+	animation.Open(IDR_AVI);
+	animation.Play(0, -1, -1);
 }
 
 BEGIN_MESSAGE_MAP(CAnimationDlg, CDialogEx)
@@ -45,7 +52,7 @@ BOOL CAnimationDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
-	// TODO: Add extra initialization here
+	InitAnimation();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }

@@ -22,6 +22,8 @@ public:
 
 
 // Implementation
+private:
+	void InitAnimation();
 protected:
 	HICON m_hIcon;
 
@@ -30,4 +32,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CAnimateCtrl animation;
 };

@@ -54,6 +54,7 @@
     <None Include="res\Animation.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="res\upload.avi" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Animation.ico">

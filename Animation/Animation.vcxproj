@@ -217,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\Animation.rc2" />
+    <None Include="res\upload.avi" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Animation.ico" />
