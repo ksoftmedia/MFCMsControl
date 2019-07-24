@@ -26,6 +26,10 @@ CEditDlg::CEditDlg(CWnd* pParent /*=nullptr*/)
 void CEditDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_EDIT1, m_edit1);
+	DDX_Control(pDX, IDC_EDIT2, m_edit2);
+	DDX_Control(pDX, IDC_EDIT3, m_edit3);
+	DDX_Control(pDX, IDC_EDIT4, m_edit4);
 }
 
 BEGIN_MESSAGE_MAP(CEditDlg, CDialogEx)
@@ -45,8 +49,10 @@ BOOL CEditDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
-	// TODO: Add extra initialization here
-
+	m_edit1.SetWindowText(_T("Hello World"));
+	m_edit2.SetWindowText(_T("Hello World"));
+	m_edit3.SetWindowText(_T("Hello World \r\nThis section contains information about the programming elements used with edit controls. An edit control is a rectangular control window typically used in a dialog box to permit the user to enter and edit text by typing on the keyboard."));
+	m_edit4.SetWindowText(_T("1234567890"));
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 

@@ -30,4 +30,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CEdit m_edit1;
+	CEdit m_edit2;
+	CEdit m_edit3;
+	CEdit m_edit4;
 };
