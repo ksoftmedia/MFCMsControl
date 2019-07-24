@@ -26,11 +26,17 @@ CDateTimePickerDlg::CDateTimePickerDlg(CWnd* pParent /*=nullptr*/)
 void CDateTimePickerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, dateTimePicker1);
 }
 
 BEGIN_MESSAGE_MAP(CDateTimePickerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_NOTIFY(DTN_DATETIMECHANGE, IDC_DATETIMEPICKER1, &CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker1)
+	ON_NOTIFY(DTN_DATETIMECHANGE, IDC_DATETIMEPICKER2, &CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker2)
+	ON_NOTIFY(DTN_DATETIMECHANGE, IDC_DATETIMEPICKER3, &CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker3)
+	ON_NOTIFY(DTN_DATETIMECHANGE, IDC_DATETIMEPICKER4, &CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker4)
+	ON_NOTIFY(DTN_DATETIMECHANGE, IDC_DATETIMEPICKER5, &CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker5)
 END_MESSAGE_MAP()
 
 
@@ -86,3 +92,48 @@ HCURSOR CDateTimePickerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker1(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMDATETIMECHANGE pDTChange = reinterpret_cast<LPNMDATETIMECHANGE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	SYSTEMTIME time = {0};
+	dateTimePicker1.GetTime(&time);
+	CTime time2;
+	dateTimePicker1.GetTime(time2);
+	TRACE("%d", time2);
+	*pResult = 0;
+}
+
+
+void CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker2(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMDATETIMECHANGE pDTChange = reinterpret_cast<LPNMDATETIMECHANGE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
+
+
+void CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker3(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMDATETIMECHANGE pDTChange = reinterpret_cast<LPNMDATETIMECHANGE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
+
+
+void CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker4(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMDATETIMECHANGE pDTChange = reinterpret_cast<LPNMDATETIMECHANGE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
+
+
+void CDateTimePickerDlg::OnDtnDatetimechangeDatetimepicker5(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	LPNMDATETIMECHANGE pDTChange = reinterpret_cast<LPNMDATETIMECHANGE>(pNMHDR);
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
